@@ -1,23 +1,25 @@
-export function TodoForm() {
-  return <p> Todo Form </p>;
+import { useState } from "react";
+
+export function TodoForm({ onAdd }) {
+  const [text, setText] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    onAdd(text);
+    setText("");
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Add your new to do here..."
+      />
+
+      <button type="submit">Add Todo</button>
+    </form>
+  );
 }
-
-// Default export
-// export default TodoForm;
-// => I export one default value from this file.
-//    When importing it, I do NOT need curly braces:
-//    import TodoForm from "./components/TodoForm";
-
-/* function TodoForm() {
-  return <p>Todo Form</p>;
-}
-
-export default TodoForm; */
-
-//////////////////// VS ////////////////////
-
-// Named export
-// export function TodoForm() { return <p>Todo Form</p>; }
-// => I export this function by its name: TodoForm.
-//    When importing it, I use the SAME name inside curly braces:
-//    import { TodoForm } from "./components/TodoForm";
