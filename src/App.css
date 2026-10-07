@@ -1,1 +1,10 @@
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+.todo.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

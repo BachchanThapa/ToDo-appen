@@ -1,8 +1,10 @@
-export function TodoList({ todos }) {
+import { TodoItem } from "./TodoItem";
+
+export function TodoList({ todos, onToggle }) {
   return (
     <ul>
       {todos.map((todo) => (
-        <li key={todo.id}>{todo.text}</li>
+        <TodoItem key={todo.id} todo={todo} onToggle={onToggle} />
       ))}
     </ul>
   );

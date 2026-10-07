@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import { TodoForm } from "./components/TodoForm";
-import { TodoItem } from "./components/TodoItem";
 import { TodoList } from "./components/TodoList";
 import { TodoStats } from "./components/TodoStats";
 
@@ -28,12 +27,20 @@ function App() {
     setTodos([...todos, newTodo]);
   }
 
+  //  Here goes the toggle function
+  function toggleDone(id) {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo,
+      ),
+    );
+  }
+
   return (
     <main className="app">
       <h1>My ToDo List</h1>
       <TodoForm onAdd={addTodo} />
-      <TodoList todos={todos} />
-      <TodoItem />
+      <TodoList todos={todos} onToggle={toggleDone} />
       <TodoStats />
     </main>
   );
