@@ -11,7 +11,7 @@ export function TodoForm({ onAdd }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="todo-form" onSubmit={handleSubmit}>
       <input
         type="text"
         value={text}
@@ -20,7 +20,9 @@ export function TodoForm({ onAdd }) {
         placeholder="Add your new to do here..."
       />
 
-      <button type="submit">Add Todo</button>
+      <button type="submit" className="add-btn">
+        Add Todo
+      </button>
     </form>
   );
 }
