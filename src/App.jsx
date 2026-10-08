@@ -42,10 +42,11 @@ function App() {
 
   return (
     <main className="app">
-      <h1>My ToDo List</h1>
+      <h1>EXAM ToDo List</h1>
+      <h4>javaScript + React</h4>
       <TodoForm onAdd={addTodo} />
       <TodoList todos={todos} onToggle={toggleDone} onRemove={removeTodo} />
-      <TodoStats />
+      <TodoStats todos={todos} />
     </main>
   );
 }

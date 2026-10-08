@@ -1,10 +1,158 @@
+.app {
+  max-width: 700px;
+  min-height: 80vh;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: #fffdf2;
+  border: 1px solid #e0d2b8;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(80, 65, 40, 0.12);
+}
+.app h1 {
+  text-align: center;
+  color: #35312b;
+}
+.app h4 {
+  text-align: center;
+  color: #35312b;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+/*====== Input and Add button===== */
+.todo-form {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+.todo-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d9c8ac;
+  border-radius: 6px;
+  background-color: white;
+  font-family: inherit;
+}
+.add-btn {
+  padding: 12px 18px;
+  background-color: #3f865a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: #2d6844;
+}
+
+/*===== Todo list ===== */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*.todo and .todo.completed --from TodoItem.jsx <li>*/
 .todo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  padding: 12px 8px;
+  border-bottom: 1px solid #d7e4e7;
+}
+.todo span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #423c33;
 }
 
+/* ===== Done/Undo toggle button===== */
+.toggle-btn {
+  padding: 7px 12px;
+  background-color: #e7eee5;
+  color: #356747;
+  border: 1px solid #b8d0b8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.toggle-btn:hover {
+  background: #d2e6d1;
+}
+/*===== Completed todos =====*/
 .todo.completed span {
   text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.5;
+}
+
+/* ===== Delete button ===== */
+.delete-btn {
+  padding: 7px 12px;
+  background: #fce5e5;
+  color: #b42323;
+  border: 1px solid #e8aaaa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+/* ===== Styling Stats ===== */
+.todo-stats {
+  margin-top: 30px;
+}
+
+.todo-stats h2 {
+  text-align: center;
+}
+
+.todo-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.todo-stats h2 {
+  grid-column: 1 / -1;
+}
+
+.todo-stats p {
+  background-color: #f3ecd9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0;
+}
+
+.todo-stats strong {
+  display: block;
+  font-size: 18px;
+  color: #356747;
+}
+
+.todo-stats span {
+  display: block;
+  font-size: 14px;
+  color: #423c33;
+}
+
+/*================================== Responsivness for mobile ============================== */
+@media (max-width: 500px) {
+  .app {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .todo-form {
+    flex-wrap: wrap;
+  }
+
+  .todo-form input {
+    flex-basis: 100%;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
 }
