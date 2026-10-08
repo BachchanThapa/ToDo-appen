@@ -16,6 +16,7 @@ export function TodoForm({ onAdd }) {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        maxLength={35}
         placeholder="Add your new to do here..."
       />
 

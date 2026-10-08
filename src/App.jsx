@@ -35,12 +35,16 @@ function App() {
       ),
     );
   }
+  //  Here goes the remove function
+  function removeTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
 
   return (
     <main className="app">
       <h1>My ToDo List</h1>
       <TodoForm onAdd={addTodo} />
-      <TodoList todos={todos} onToggle={toggleDone} />
+      <TodoList todos={todos} onToggle={toggleDone} onRemove={removeTodo} />
       <TodoStats />
     </main>
   );
