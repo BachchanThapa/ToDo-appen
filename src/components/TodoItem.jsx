@@ -7,7 +7,7 @@ export function TodoItem({ todo, onToggle, onRemove }) {
         className="toggle-btn"
         onClick={() => onToggle(todo.id)}
       >
-        {todo.done ? "Undo" : "Done"}
+        {todo.done ? "↩️ Undo" : "✅ Done"}
       </button>
 
       <span>{todo.text}</span>

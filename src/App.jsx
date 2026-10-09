@@ -13,6 +13,8 @@ function App() {
     { id: 3, text: "Meet the requirements", done: false },
   ]);
 
+  // Receives the text from TodoForm, validates it,
+  // creates a new todo object and updates the todos array.
   function addTodo(text) {
     const trimmed = text.trim();
     if (!trimmed) return;
@@ -23,11 +25,13 @@ function App() {
       text: trimmed,
       done: false,
     };
-
+    // Checking the ID and data of each newly created todo.
+    // console.log("in console, New Todo ID:", newTodo);
     setTodos([...todos, newTodo]);
   }
 
-  //  Here goes the toggle function
+  // Finds the clicked todo by ID and flips its done status.
+  // map() creates a new array while keeping the other todos unchanged.
   function toggleDone(id) {
     setTodos(
       todos.map((todo) =>
@@ -35,10 +39,14 @@ function App() {
       ),
     );
   }
-  //  Here goes the remove function
+
+  // Removes the clicked todo by ID.
+  // filter() creates a new array containing only the remaining todos.
   function removeTodo(id) {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
+  // Displaying all todos (ID, text, done) in the browser console.
+  // console.table(todos);
 
   return (
     <main className="app">
