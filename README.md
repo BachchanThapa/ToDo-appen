@@ -4,7 +4,7 @@ A simple interactive ToDo application built with React, JavaScript, and CSS for 
 
 ## Video presentation
 
-**Teams recording:** [Watch my presentation](I_will_paste_Teams_video_link_here)
+**Teams recording:** [▶️ Watch my Todo App Presentation (10:40)](https://funet-my.sharepoint.com/:v:/g/personal/3ggyhmu26_thapba_folkuniversitetet_nu/IQCGc0mJ75jEQ7qmDcGMnUISAdNDy-NLcDeIZKLrlNj4WGw?e=6h0dEZ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ## About the app
 
